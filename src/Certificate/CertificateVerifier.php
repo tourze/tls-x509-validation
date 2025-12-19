@@ -101,7 +101,7 @@ abstract class CertificateVerifier
      */
     protected function verifyChainWithStore(string $certificate, array $certificateChain): bool
     {
-        /** @phpstan-ignore-next-line */
+        /** @phpstan-ignore function.notFound (未来可能存在的函数，运行时由 function_exists 防护) */
         $store = \openssl_x509_store();
 
         $this->addCertificatesToStore($store, $certificateChain);
